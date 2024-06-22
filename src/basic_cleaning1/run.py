@@ -14,6 +14,7 @@ logger = logging.getLogger()
 
 
 def go(args):
+
     os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
 
     run = wandb.init(job_type="job_t_cleaning")
@@ -58,6 +59,7 @@ def go(args):
     artifact.add_file(cleaned_data_path)
     run.log_artifact(artifact)
     logger.info("Cleaned data artifact logged to Weights & Biases")
+    ######################
 
 
 if __name__ == "__main__":
@@ -67,43 +69,43 @@ if __name__ == "__main__":
 
     parser.add_argument(
         "--input_artifact", 
-        type=str,
-        help="Name of the input artifact",
+        type= str,
+        help="Description of input_artifact",
         required=True
     )
 
     parser.add_argument(
         "--output_artifact", 
-        type=str,
-        help="Name of the output artifact",
+        type= str,
+        help="Description of output_artifact",
         required=True
     )
 
     parser.add_argument(
         "--output_type", 
-        type=str,
-        help="Type of the output artifact",
+        type= str,
+        help="Description of output_type",
         required=True
     )
 
     parser.add_argument(
         "--output_description", 
-        type=str,
-        help="Description for the output artifact",
+        type= str,
+        help="Description of output_description",
         required=True
     )
 
     parser.add_argument(
         "--min_price", 
-        type=float,
-        help="Minimum price to consider",
+        type= float,
+        help="Description of min_price",
         required=True
     )
 
     parser.add_argument(
         "--max_price", 
-        type=float,
-        help="Maximum price to consider",
+        type= float,
+        help="Description of max_price",
         required=True
     )
 

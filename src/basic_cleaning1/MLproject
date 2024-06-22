@@ -1,4 +1,4 @@
-name: basic_cleaning
+name: basic_cleaning1
 conda_env: conda.yml
 
 entry_points:
@@ -6,27 +6,27 @@ entry_points:
     parameters:
 
       input_artifact:
-        description: "Name of the input artifact"
+        description: 'Description of input_artifact'
         type: string
 
       output_artifact:
-        description: "Name of the output artifact"
+        description: 'Description of output_artifact'
         type: string
 
       output_type:
-        description: "Type of the output artifact"
+        description: 'Description of output_type'
         type: string
 
       output_description:
-        description: "Description for the output artifact"
+        description: 'Description of output_description'
         type: string
 
       min_price:
-        description: "Minimum price to consider"
+        description: 'Description of min_price'
         type: float
 
       max_price:
-        description: "Maximum price to consider"
+        description: 'Description of max_price'
         type: float
 
 
